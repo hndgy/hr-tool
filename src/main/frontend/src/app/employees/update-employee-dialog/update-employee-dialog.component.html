@@ -1,0 +1,36 @@
+<form #addForm="ngForm" >
+
+    <input [ngModel]="this.editEmployee.id" name="id" readonly type="hidden">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>First name </mat-label>
+        <input matInput [ngModel]="this.editEmployee.firstName" name="firstName" placeholder="John" value="" required="">
+    </mat-form-field> 
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Last name </mat-label>
+        <input matInput [ngModel]="this.editEmployee.lastName" name="lastName" placeholder="Doe" value="" required="">
+      </mat-form-field>
+       <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Phone </mat-label>
+        <input matInput [ngModel]="this.editEmployee.phoneNumber" name="phoneNumber" placeholder="12 23 34 45 56" value="" type="number" required="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Image URL </mat-label>
+        <input matInput [ngModel]="this.editEmployee.imageUrl" name="imageUrl" placeholder="https://pathtoimage" value="" type="url" required="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email </mat-label>
+        <input matInput [ngModel]="this.editEmployee.email" name="email" placeholder="john@doe.com" value="" type="email" required="">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Birth Date</mat-label>
+        <input [ngModel]="this.editEmployee.birthDate" matInput [matDatepicker]="picker" name="birthDate" >
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+
+      <button mat-button (click)="onNoClick()">Cancel</button>
+      <button   [disabled]="addForm.invalid" mat-button [mat-dialog-close]="addForm" cdkFocusInitial type="submit">Mettre à jour</button>
+</form>

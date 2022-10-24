@@ -1,3 +1,6 @@
+<h1>Update employee #{{this.editEmployee.id}}</h1>
+
+
 <form #addForm="ngForm" >
 
     <input [ngModel]="this.editEmployee.id" name="id" readonly type="hidden">
@@ -32,5 +35,5 @@
 
 
       <button mat-button (click)="onNoClick()">Cancel</button>
-      <button   [disabled]="addForm.invalid" mat-button [mat-dialog-close]="addForm" cdkFocusInitial type="submit">Mettre à jour</button>
+      <button   [disabled]="addForm.invalid" mat-button [mat-dialog-close]="addForm" cdkFocusInitial type="submit">Update</button>
 </form>

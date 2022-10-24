@@ -18,7 +18,7 @@ export class EmployeesComponent implements OnInit {
 
   public employees : Employee[] = [];
   public dataSource = new MatTableDataSource(this.employees);
-  public displayedColumns: string[] = ["id","firstName", "lastName","email"];
+  public displayedColumns: string[] = ["id","imageUrl","firstName", "lastName","email","phoneNumber","birthDate"];
   constructor(
     private employeeService : EmployeeService,
     private dialog: MatDialog

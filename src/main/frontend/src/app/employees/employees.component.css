@@ -11,3 +11,12 @@ table {
 .container{
   margin: 0 10%;
 }
+
+.image-user{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
